@@ -1,1 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-13T22:42:21-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Data Diaries</title><subtitle>Exploring data science and analytics through the eyes of a young woman</subtitle><author><name>Aly Milne</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-13T22:53:32-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Data Diaries</title><subtitle>Exploring data science and analytics through the eyes of a young woman</subtitle><author><name>Aly Milne</name></author><entry><title type="html">A Wee Little Tableau Tutorial</title><link href="http://localhost:4000/2023/10/09/tableau-tutorial.html" rel="alternate" type="text/html" title="A Wee Little Tableau Tutorial" /><published>2023-10-09T00:00:00-06:00</published><updated>2023-10-09T00:00:00-06:00</updated><id>http://localhost:4000/2023/10/09/tableau-tutorial</id><content type="html" xml:base="http://localhost:4000/2023/10/09/tableau-tutorial.html">&lt;p&gt;Tableau is a common data visualization tool used across many industries. Being able to effectively utilize Tableau to create meaningful insights for project and product managers is a&lt;/p&gt;
+
+&lt;p&gt;Prerequisites:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tableau Desktop installed on your computer (You can download a trial version from the Tableau website).&lt;/li&gt;
+  &lt;li&gt;A dataset to work with. You can use the sample Superstore dataset that comes with Tableau or your own data.
+    &lt;ul&gt;
+      &lt;li&gt;I recommend finding a dataset that interests you and that you understand the context of. For example, I’m using a downloaded Star Wars dataset found &lt;a href=&quot;https://github.com/tidyverse/dplyr/blob/main/data-raw/starwars.csv&quot;&gt;here.&lt;/a&gt;
+Let’s get started.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;step-1-connect-to-your-data&quot;&gt;Step 1: Connect to Your Data&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;Launch Tableau Desktop.&lt;/li&gt;
+  &lt;li&gt;Click on “Connect to Data” to open the data source pane.&lt;/li&gt;
+  &lt;li&gt;Select your data source, whether it’s a database, spreadsheet, or other file type.&lt;/li&gt;
+  &lt;li&gt;Connect to your data by specifying the connection details or browsing for the file.
+    &lt;ul&gt;
+      &lt;li&gt;For the Star Wars data, I simply clicked “More…” in the left pane which opened a file browser. I found my file from there and opened it.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;step-2-explore-your-data&quot;&gt;Step 2: Explore Your Data&lt;/h1&gt;
+&lt;p&gt;Exploratory data analysis is always important before you start heavy-lifting. Follow these steps to poke around your data and make sure it looks and behaves like you want:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Drag and drop dimensions and measures onto the Rows and Columns shelves to view the data table.&lt;/li&gt;
+  &lt;li&gt;Use the “Show Me” panel to explore different chart types.&lt;/li&gt;
+  &lt;li&gt;Filter and sort your data to uncover insights.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;step-3-create-worksheets&quot;&gt;Step 3: Create Worksheets&lt;/h1&gt;
+&lt;p&gt;Worksheets are like the tiles that make up your flooring. Your first one will be initialized for you as Sheet1. Make as many worksheets as you need by following these steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Click on the “New Worksheet” tab at the bottom of the window. (Or use Sheet1 if this is your first worksheet.)&lt;/li&gt;
+  &lt;li&gt;Drag and drop fields from the Data pane to Rows and Columns shelves.
+    &lt;ul&gt;
+      &lt;li&gt;Note: Create new fields by right clicking empty space in the left pane and selecting “Create calculated Field.” This opens a SQL-like query box where you can manipulate the data as you like.
+&lt;img src=&quot;http://localhost:4000//stat386-blog-theme-main/assets/images/tableau_images/calc_field.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Customize your visualization by choosing chart type, colors, and formatting options.
+    &lt;ul&gt;
+      &lt;li&gt;Note: Click “Show Me” on the top right to open a view of all the charts available given your selected fields.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;step-4-design-your-dashboard-layout&quot;&gt;Step 4: Design Your Dashboard Layout&lt;/h1&gt;
+&lt;p&gt;Now that you have your worksheets, it’s time to design the layout for your dashboard. Follow these steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Click on the “Dashboard” tab at the bottom of the window.
+    &lt;ul&gt;
+      &lt;li&gt;Note: You’ll see a blank canvas for your dashboard. To the left, you have the “Objects” pane, which contains various items you can add to your dashboard.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Drag a “Horizontal” or “Vertical” layout container to the dashboard canvas. This will serve as a container for your worksheets.&lt;/li&gt;
+  &lt;li&gt;Drag worksheets from the “Sheets” pane to the layout container. You can arrange them by dragging and dropping, and you can resize them by clicking and dragging the edges.&lt;/li&gt;
+  &lt;li&gt;Add titles and text to provide context for your dashboard.
+    &lt;ul&gt;
+      &lt;li&gt;Note: Sometimes, I get lost in the sauce and have no idea where each object really is in relation to each other. To find out, click “Layout,” then open all the hierarchy tabs to find out which object is in which container.
+&lt;img src=&quot;http://localhost:4000//stat386-blog-theme-main/assets/images/tableau_images/hierarchy.png&quot; alt=&quot;Figure&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;step-5-add-interactivity&quot;&gt;Step 5: Add Interactivity&lt;/h1&gt;
+&lt;p&gt;Adding interactivity allows views of your dashboard to adjust their view. Consider some of the following:&lt;/p&gt;
+
+&lt;p&gt;Filters: Drag and drop fields to create filters that allow users to refine the data displayed on the dashboard.
+Actions: Create actions that link different worksheets or dashboards together. For example, clicking on a data point in one chart can update another chart.
+Parameters: Parameters allow users to input values to dynamically change aspects of the visualization.&lt;/p&gt;
+
+&lt;h1 id=&quot;step-6-publish-and-share&quot;&gt;Step 6: Publish and Share&lt;/h1&gt;
+&lt;p&gt;Once you’ve created your dashboard, you can share it with others:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Click on “File” and select “Save” to save your Tableau workbook.&lt;/li&gt;
+  &lt;li&gt;Publish your dashboard to Tableau Server or Tableau Online if you have access to these platforms.&lt;/li&gt;
+  &lt;li&gt;Export your dashboard as a PDF or image to share via email or other communication channels.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;In this tutorial, you’ve learned how to create a simple dashboard in Tableau. You started by connecting to your data, exploring it, and then designing a layout for your dashboard. You added interactivity, formatted and styled your dashboard, and learned how to share and maintain it. With these skills, you can effectively present your data and insights in a visual and interactive way. As you become more proficient with Tableau, you can explore more advanced features to create even more powerful dashboards. Godspeed, soldiers!&lt;/p&gt;</content><author><name>Aly Milne</name></author><summary type="html">Tableau is a common data visualization tool used across many industries. Being able to effectively utilize Tableau to create meaningful insights for project and product managers is a</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/building_chart.png/" /><media:content medium="image" url="http://localhost:4000/assets/building_chart.png/" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

@@ -3,7 +3,7 @@ layout: post
 title:  "A Wee Little Tableau Tutorial"
 author: Aly Milne
 description: Begin to wield the power of Tableau by connecting to live data sources and creating dynamic visuals
-image: "assets/building_chart.png"
+image: /assets/building_chart.png/
 --- 
 
 Tableau is a common data visualization tool used across many industries. Being able to effectively utilize Tableau to create meaningful insights for project and product managers is a

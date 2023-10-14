@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>A Wee Little Tableau Tutorial | Data Diaries</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="A Wee Little Tableau Tutorial" />
+<meta name="author" content="Aly Milne" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Begin to wield the power of Tableau by connecting to live data sources and creating dynamic visuals" />
+<meta property="og:description" content="Begin to wield the power of Tableau by connecting to live data sources and creating dynamic visuals" />
+<link rel="canonical" href="http://localhost:4000/2023/10/09/tableau-tutorial.html" />
+<meta property="og:url" content="http://localhost:4000/2023/10/09/tableau-tutorial.html" />
+<meta property="og:site_name" content="Data Diaries" />
+<meta property="og:image" content="http://localhost:4000/assets/building_chart.png/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-10-09T00:00:00-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/building_chart.png/" />
+<meta property="twitter:title" content="A Wee Little Tableau Tutorial" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aly Milne"},"dateModified":"2023-10-09T00:00:00-06:00","datePublished":"2023-10-09T00:00:00-06:00","description":"Begin to wield the power of Tableau by connecting to live data sources and creating dynamic visuals","headline":"A Wee Little Tableau Tutorial","image":"http://localhost:4000/assets/building_chart.png/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2023/10/09/tableau-tutorial.html"},"url":"http://localhost:4000/2023/10/09/tableau-tutorial.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Data Diaries" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Data Diaries</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header"><img src="/assets/building_chart.png/", alt="", class="featured-image-post"><h1 class="post-title p-name" itemprop="name headline">A Wee Little Tableau Tutorial</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-10-09T00:00:00-06:00" itemprop="datePublished">Oct 9, 2023
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">by Aly Milne</span></span><span class="post-meta"> • 4 min read</span><p><em> <font size="-1">Begin to wield the power of Tableau by connecting to live data sources and creating dynamic visuals </font></em></p></p>
+    <hr style="height:1px;border:none;color:#333;background-color:#333;" />
+    
+  </header>
+  
+ 
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Tableau is a common data visualization tool used across many industries. Being able to effectively utilize Tableau to create meaningful insights for project and product managers is a</p>
+
+<p>Prerequisites:</p>
+
+<ul>
+  <li>Tableau Desktop installed on your computer (You can download a trial version from the Tableau website).</li>
+  <li>A dataset to work with. You can use the sample Superstore dataset that comes with Tableau or your own data.
+    <ul>
+      <li>I recommend finding a dataset that interests you and that you understand the context of. For example, I’m using a downloaded Star Wars dataset found <a href="https://github.com/tidyverse/dplyr/blob/main/data-raw/starwars.csv">here.</a>
+Let’s get started.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="step-1-connect-to-your-data">Step 1: Connect to Your Data</h1>
+<ol>
+  <li>Launch Tableau Desktop.</li>
+  <li>Click on “Connect to Data” to open the data source pane.</li>
+  <li>Select your data source, whether it’s a database, spreadsheet, or other file type.</li>
+  <li>Connect to your data by specifying the connection details or browsing for the file.
+    <ul>
+      <li>For the Star Wars data, I simply clicked “More…” in the left pane which opened a file browser. I found my file from there and opened it.</li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="step-2-explore-your-data">Step 2: Explore Your Data</h1>
+<p>Exploratory data analysis is always important before you start heavy-lifting. Follow these steps to poke around your data and make sure it looks and behaves like you want:</p>
+
+<ol>
+  <li>Drag and drop dimensions and measures onto the Rows and Columns shelves to view the data table.</li>
+  <li>Use the “Show Me” panel to explore different chart types.</li>
+  <li>Filter and sort your data to uncover insights.</li>
+</ol>
+
+<h1 id="step-3-create-worksheets">Step 3: Create Worksheets</h1>
+<p>Worksheets are like the tiles that make up your flooring. Your first one will be initialized for you as Sheet1. Make as many worksheets as you need by following these steps:</p>
+
+<ol>
+  <li>Click on the “New Worksheet” tab at the bottom of the window. (Or use Sheet1 if this is your first worksheet.)</li>
+  <li>Drag and drop fields from the Data pane to Rows and Columns shelves.
+    <ul>
+      <li>Note: Create new fields by right clicking empty space in the left pane and selecting “Create calculated Field.” This opens a SQL-like query box where you can manipulate the data as you like.
+<img src="http://localhost:4000//stat386-blog-theme-main/assets/images/tableau_images/calc_field.png" alt="Figure" /></li>
+    </ul>
+  </li>
+  <li>Customize your visualization by choosing chart type, colors, and formatting options.
+    <ul>
+      <li>Note: Click “Show Me” on the top right to open a view of all the charts available given your selected fields.</li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="step-4-design-your-dashboard-layout">Step 4: Design Your Dashboard Layout</h1>
+<p>Now that you have your worksheets, it’s time to design the layout for your dashboard. Follow these steps:</p>
+
+<ol>
+  <li>Click on the “Dashboard” tab at the bottom of the window.
+    <ul>
+      <li>Note: You’ll see a blank canvas for your dashboard. To the left, you have the “Objects” pane, which contains various items you can add to your dashboard.</li>
+    </ul>
+  </li>
+  <li>Drag a “Horizontal” or “Vertical” layout container to the dashboard canvas. This will serve as a container for your worksheets.</li>
+  <li>Drag worksheets from the “Sheets” pane to the layout container. You can arrange them by dragging and dropping, and you can resize them by clicking and dragging the edges.</li>
+  <li>Add titles and text to provide context for your dashboard.
+    <ul>
+      <li>Note: Sometimes, I get lost in the sauce and have no idea where each object really is in relation to each other. To find out, click “Layout,” then open all the hierarchy tabs to find out which object is in which container.
+<img src="http://localhost:4000//stat386-blog-theme-main/assets/images/tableau_images/hierarchy.png" alt="Figure" /></li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="step-5-add-interactivity">Step 5: Add Interactivity</h1>
+<p>Adding interactivity allows views of your dashboard to adjust their view. Consider some of the following:</p>
+
+<p>Filters: Drag and drop fields to create filters that allow users to refine the data displayed on the dashboard.
+Actions: Create actions that link different worksheets or dashboards together. For example, clicking on a data point in one chart can update another chart.
+Parameters: Parameters allow users to input values to dynamically change aspects of the visualization.</p>
+
+<h1 id="step-6-publish-and-share">Step 6: Publish and Share</h1>
+<p>Once you’ve created your dashboard, you can share it with others:</p>
+
+<ol>
+  <li>Click on “File” and select “Save” to save your Tableau workbook.</li>
+  <li>Publish your dashboard to Tableau Server or Tableau Online if you have access to these platforms.</li>
+  <li>Export your dashboard as a PDF or image to share via email or other communication channels.</li>
+</ol>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>In this tutorial, you’ve learned how to create a simple dashboard in Tableau. You started by connecting to your data, exploring it, and then designing a layout for your dashboard. You added interactivity, formatted and styled your dashboard, and learned how to share and maintain it. With these skills, you can effectively present your data and insights in a visual and interactive way. As you become more proficient with Tableau, you can explore more advanced features to create even more powerful dashboards. Godspeed, soldiers!</p>
+
+  </div>
+
+  <script src="https://utteranc.es/client.js"
+          repo="your-user-name/stat386-blog-theme"
+          issue-term="pathname"
+          label="💬"
+          theme="boxy-light"
+          crossorigin="anonymous"
+          async>
+  </script><a class="u-url" href="/2023/10/09/tableau-tutorial.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+  <!-- <h2 class="footer-heading">Data Diaries</h2> -->
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Aly Milne</li><li><a class="u-email" href="mailto:alyssa.a.milne@gmail.com">alyssa.a.milne@gmail.com</a></li><li>&copy; AAM 2023 </li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/alpal923"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">alpal923</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <a href="https://github.com/alpal923/alpal923.github.io" class="button"><strong>View Source Repo On GitHub</strong></a>
+
+        <p>
+          The default image for this website was generated by DALL-E.
+        </p>
+        
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
