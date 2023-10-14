@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-13T22:28:22-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Data Diaries</title><subtitle>Exploring data science and analytics through the eyes of a young woman</subtitle><author><name>Aly Milne</name></author><entry><title type="html">How to create a blog post</title><link href="http://localhost:4000/2022/08/01/sample-post.html" rel="alternate" type="text/html" title="How to create a blog post" /><published>2022-08-01T00:00:00-06:00</published><updated>2022-08-01T00:00:00-06:00</updated><id>http://localhost:4000/2022/08/01/sample-post</id><content type="html" xml:base="http://localhost:4000/2022/08/01/sample-post.html">&lt;h2 id=&quot;steps-for-creating-a-new-post&quot;&gt;Steps for creating a new post.&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a new file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; folder called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-post-name.md&lt;/code&gt;, where YYYY is the year (2023), MM numeric month (01-12), and DD is the numeric day of the month (01-31).  The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post-name&lt;/code&gt; is a short name for the new post with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt; between words.  &lt;strong&gt;You must use this name convention for all new posts.&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Make the YML heading.  All pages in the site need to start with a YML heading.  For posts you should use the following header:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: post
+title:  &quot;Post Name&quot;
+author: Your name
+description: Short yet informative description
+image: /assets/images/blog-image.jpg
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For this theme, the layout should stay as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post&lt;/code&gt;.   All the other fields should be updated with the information for your particular blog post.  The blog image should be a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jpg&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.png&lt;/code&gt; file that you should add to the folder &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assets/images&lt;/code&gt;.  Don’t make it too large or the page will take longer to load (500-800 KB is a good size).  Leave the file path as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/assets/images/&lt;/code&gt; in the header area.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Write the body of the blog using markdown.  There are a lot of references for markdown available.  I like the &lt;a href=&quot;https://www.markdownguide.org&quot;&gt;Markdown Guide&lt;/a&gt; because many of the examples show both the markdown and the html code.  There are separate pages for &lt;a href=&quot;https://www.markdownguide.org/basic-syntax/&quot;&gt;basic syntax&lt;/a&gt;, &lt;a href=&quot;https://www.markdownguide.org/extended-syntax/&quot;&gt;extended syntax&lt;/a&gt;, and a &lt;a href=&quot;https://www.markdownguide.org/cheat-sheet/&quot;&gt;cheatsheet&lt;/a&gt; for quick reference.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;You can also use html code snippets along with the markdown.  Often, using html will give you a little more control and flexibility as demonstrated below.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;this-is-a-change&quot;&gt;This is a change&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;links&quot;&gt;Links&lt;/h3&gt;
+
+&lt;p&gt;To create a link (internal or external), enclose the link text in brackets (e.g., [Statistics Department]) and then follow it immediately with the URL in parentheses (e.g., (https://statistics.byu.edu)).&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;My favorite department at BYU is the [Statistics Department](https://statistics.byu.edu).
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;My favorite department at BYU is the &lt;a href=&quot;https://statistics.byu.edu&quot;&gt;Statistics Department&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want external links to open in a separate window, you will need to use html code with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;target=&quot;_blank&quot;&lt;/code&gt; inside the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; tag.&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;My favorite department at BYU is the &amp;lt;a href=&quot;https:statistics.byu.edu&quot; target=&quot;_blank&quot;&amp;gt;Statistics Department&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;My favorite department at BYU is the &lt;a href=&quot;https:statistics.byu.edu&quot; target=&quot;_blank&quot;&gt;Statistics Department&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;internal-links-and-files&quot;&gt;Internal Links and Files&lt;/h2&gt;
+
+&lt;p&gt;If you want to have a link that points to another location on your site or if you want to include a file (such as an image or video) you must use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;site.url&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;site.baseurl&lt;/code&gt; variables when making the link reference.  For example, this link to pointing to the &lt;a href=&quot;http://localhost:4000//about&quot;&gt;About&lt;/a&gt; page is coded as:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[About]({{site.url}}/{{site.baseurl}}/about)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Paths to files should also be referenced with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;site.url&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;site.baseurl&lt;/code&gt; variables (see the section on &lt;strong&gt;Adding Images&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;adding-images&quot;&gt;Adding Images&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;In the examples below, if your image ends with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.png&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.JPEG&lt;/code&gt;, use the appropriate extension instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jpg&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Images for the blog will generally but put into the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assets/images&lt;/code&gt; folder.  (You can also create a subfolder for images, but you will need to include the subfolder name in the reference link.)&lt;/p&gt;
+
+&lt;p&gt;Markdown syntax for including images is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;![Fig Name](path/to/image)&lt;/code&gt;.  For example:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;![Figure]({{site.url}}/{{site.baseurl}}/assets/images/image_name.jpg)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000//assets/images/image5.jpg&quot; alt=&quot;Figure&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;resizing-images&quot;&gt;Resizing images&lt;/h3&gt;
+
+&lt;p&gt;The image I added in the previous section seems a bit large for this post.  Unfortunately,
+there isn’t a good way to resize images with markdown, so if you need to resize an image, use html instead of markdown and specify the width in the style parameter as follows:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;img src=&quot;{{site.url}}/{{site.baseurl}}/assets/images/image_name.jpg&quot; alt=&quot;&quot; style=&quot;width:300px;&quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;(Example with width set to 300 pixels)
+&lt;img src=&quot;http://localhost:4000//assets/images/image5.jpg&quot; alt=&quot;&quot; style=&quot;width:300px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Example with width set to 100 pixels)
+&lt;img src=&quot;http://localhost:4000//assets/images/image5.jpg&quot; alt=&quot;&quot; style=&quot;width:100px;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;troubleshooting&quot;&gt;Troubleshooting&lt;/h2&gt;
+
+&lt;p&gt;Here are some things to keep in mind if your blog appearance isn’t going as you planned:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem:  The blog post that I created isn’t appearing&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Possible Solutions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Check your date. GitHub pages won’t display blog posts with future dates&lt;/li&gt;
+  &lt;li&gt;Check the yaml header.  If there are any special characters in any of the fields, you need to use quotes around the entire field entry.  The most common culprit is the description.  If you’re having trouble, try putting quotes around the entire description&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem:  I know that I made changes to a blog post but the changes aren’t appearing&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Possible Solution:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Check the header.  If there are any special characters in any of the fields, you need to use quotes around the entire field entry.  The most common culprit is the description.  If you’re having trouble, try putting quotes around the entire description.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem:  My entire blog has weird formatting&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Possible Solution:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Usually this is an address problem.  Double check your url and baseurl in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config&lt;/code&gt; file&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Shannon Tass</name></author><summary type="html">Steps for creating a new post.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/image5.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/image5.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
