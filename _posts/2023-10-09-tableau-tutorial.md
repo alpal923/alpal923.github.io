@@ -35,7 +35,7 @@ Worksheets are like the tiles that make up your flooring. Your first one will be
 1. Click on the "New Worksheet" tab at the bottom of the window. (Or use Sheet1 if this is your first worksheet.)
 2. Drag and drop fields from the Data pane to Rows and Columns shelves.
 * Note: Create new fields by right clicking empty space in the left pane and selecting "Create calculated Field." This opens a SQL-like query box where you can manipulate the data as you like.
-![Figure]({{site.url}}/{{site.baseurl}}/stat386-blog-theme-main/assets/images/tableau_images/calc_field.png)
+![Figure]({{site.url}}/{{site.baseurl}}/assets/images/tableau_images/calc_field.png)
 3. Customize your visualization by choosing chart type, colors, and formatting options.
 * Note: Click "Show Me" on the top right to open a view of all the charts available given your selected fields.
 
@@ -48,7 +48,7 @@ Now that you have your worksheets, it's time to design the layout for your dashb
 3. Drag worksheets from the "Sheets" pane to the layout container. You can arrange them by dragging and dropping, and you can resize them by clicking and dragging the edges.
 4. Add titles and text to provide context for your dashboard.
 * Note: Sometimes, I get lost in the sauce and have no idea where each object really is in relation to each other. To find out, click "Layout," then open all the hierarchy tabs to find out which object is in which container.
-![Figure]({{site.url}}/{{site.baseurl}}/stat386-blog-theme-main/assets/images/tableau_images/hierarchy.png)
+![Figure]({{site.url}}/{{site.baseurl}}/assets/images/tableau_images/hierarchy.png)
 
 # Step 5: Add Interactivity
 Adding interactivity allows views of your dashboard to adjust their view. Consider some of the following: 
