@@ -135,7 +135,7 @@ def drop_columns_with_fewer_nans(df, by="prop", by_val="0.05"):
 
 ## Adding External Details
 
-I have the names of dig sites where these artifacts were found, but I want to be able to map them. To do so, I brought in more data using OpenStreetMap which is a free to use mapping database. It is particularly good for Europe.
+I have the names of dig sites where these artifacts were found, but I want to be able to map them. To do so, I brought in more data using OpenStreetMap which is a free to use mapping database. It is particularly good for Europe. I applied this to the 'Plats' field (place it was found) and the 'Historisk plats' field (place it likely came from).
 
 Since it is free to use, you must identify yourself using your email address or app name and they ask that you don't spam them with requests. I set a wait time of 0.5 seconds before each new query as to not overload it. Additionally, I tried to cache repeat locations so it didn't have to make a new call every time.
 
