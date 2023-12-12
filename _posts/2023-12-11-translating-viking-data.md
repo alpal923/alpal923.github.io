@@ -95,7 +95,7 @@ for column in text_columns:
         df.loc[batch_texts.index, column + '_translated'] = translated_batch
 ```
 
-## Final Touch
+## Final Cleaning
 I noticed my dataset had a field called 'Datering' (the date range the artifact is expected to come from) which wasn't in a very useful format. I decided to split the column into two with just the years for Start and End.
 
 ```python
@@ -103,9 +103,60 @@ I noticed my dataset had a field called 'Datering' (the date range the artifact 
 df[['Era Start Year', 'Era End Year']] = df['Datering'].str.split(' – ', expand=True)
 ```
 
+I also wished to separate the dimensions in the Storlek column. I noticed there were sometimes multiple measurements of the same dimension (ie two or three lengths) and that the units were not standard. Breaking these values into parts and converting them to the same unit (mm for length, g for weight) was a rather simple task.
+
+```python
+# Conversion factors to millimeters for lengths and diameters, and to grams for weight
+length_conversion_factors = {'mm': 1, 'cm': 10, 'm': 1000}
+weight_conversion_factors = {'g': 1, 'kg': 1000}
+
+# Function to extract and keep the largest measurements in mm and g
+def extract_max_measurements(row):
+    measurements = {
+        'Width': None,
+        'Length': None,
+        'Thickness': None,
+        'Diameter': None,
+        'Weight': None
+    }
+
+    # Check if row is a string
+    if not isinstance(row, str):
+        return pd.Series(measurements)
+
+    # Find all matches of measurements
+    matches = re.findall(r'(Width|Length|Thickness|Diameter|Weight) (\d+(\.\d+)?) (mm|cm|m|g|kg)', row)
+    for match in matches:
+        measure_type, measure_value, _, unit = match
+        measure_value = float(measure_value)
+        if measure_type in ['Width', 'Length', 'Thickness', 'Diameter']:
+            measure_value *= length_conversion_factors[unit]
+        elif measure_type == 'Weight':
+            measure_value *= weight_conversion_factors[unit]
+
+        if measurements[measure_type] is None or measure_value > measurements[measure_type]:
+            measurements[measure_type] = measure_value
+
+    return pd.Series(measurements)
+```
+
+Lastly, I wanted to know what year teach artifact was uncovered, but the column for that wasn't formatted uniformly. 
+
+```python
+# Function to convert to year
+def convert_to_year(date_str):
+    try:
+        return pd.to_datetime(date_str).year
+    except:
+        return date_str
+
+# Apply the conversion
+df['year'] = df['date_column'].apply(convert_to_year)
+```
+
 ## Conclusion
 This process allowed me to create a dataset more useful for the EDA and dashboard creation. While it wasn't perfect (some fields stayed Swedish) this is a much more usable set than before!
 
 ## Code Repo
 To see the full code for this process, visit this repo:
-https://github.com/alpal923/Scraping_Viking_Data
+[Viking Scraping and Cleaning](https://github.com/alpal923/Scraping_Viking_Data)

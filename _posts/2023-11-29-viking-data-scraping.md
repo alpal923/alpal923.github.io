@@ -198,4 +198,4 @@ This was such a fun way to use Selenium to grab my own data! It seemed for a whi
 ## Code Repo
 
 For full code, see this repo:
-https://github.com/alpal923/Scraping_Viking_Data
+[Viking Scraping and Cleaning](https://github.com/alpal923/Scraping_Viking_Data)
