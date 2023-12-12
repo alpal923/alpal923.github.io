@@ -177,6 +177,10 @@ def geocode_location(row):
 cleaned_trade_artifacts[['latitude', 'longitude']] = cleaned_trade_artifacts.apply(geocode_location, axis=1)
 ```
 
+## Ethical Considerations
+
+As noted in some of my previous sections, the data I pulled is all free to use. I checked the robots.txt for the museum catalog and there were no restrictions. However, I tried my best to not over-use the tool that other's have so graciously put out for me by adding wait times. 
+
 ## Saving the Work
 
 Finally, I saved the DataFrame as a CSV file for future use:
@@ -186,6 +190,10 @@ cleaned_trade_artifacts.to_csv('trade_w_locations.csv', index=False)
 ```
 
 Please note that this dataset is in Swedish. To see my process of translating it, please see my Google Translation API post.
+
+## Conclusion
+
+This was such a fun way to use Selenium to grab my own data! It seemed for a while like I had bit off more than I could chew, but I was able to get there eventually. I'd like to repurpose some of this code to see what other museums will let me scrape their data for more analysis!
 
 ## Code Repo
 
