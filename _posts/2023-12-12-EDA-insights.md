@@ -62,3 +62,7 @@ Even though there were many insights I could have learned from a textbook (ie. i
 
 ## Future Work
 Moving forward, I would love to see if I can pinpoint exact digs for these artifacts.
+
+## Code Repo
+To see the full code for this process, visit this repo:
+[Viking EDA](https://github.com/alpal923/Viking_EDA)
