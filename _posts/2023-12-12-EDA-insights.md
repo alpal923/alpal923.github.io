@@ -58,7 +58,7 @@ I have no clue whats a pilspet is, so I had to look it up. Turns out, it's an ar
 This was a surprisingly fun insight as I most often picture Vikings with axes and swords.
 
 ## Conclusion
-Even though there were many insights I could have learned from a textbook (ie. iron for weapons and silver for trading), there were some fun details I learned about Vikings doing this EDA! I really appreciate having the skill set necessary to do my own analysis instead of relying on the stereotypes of Vikings and what others can tell me.
+Even though there were many insights I could have learned from a textbook (ie. iron for weapons and silver for trading), there were some fun details I learned about Vikings doing this EDA! It was particularly interesting to discover those sites where most of the artifacts were found. I really appreciate having the skill set necessary to do my own analysis instead of relying on the stereotypes of Vikings and what others can tell me.
 
 ## Future Work
 Moving forward, I would love to see if I can pinpoint exact digs for these artifacts.
