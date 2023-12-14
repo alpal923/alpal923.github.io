@@ -8,7 +8,7 @@ image: "/assets/images/DALLE/viking_in_archive.png"
 
 ## Introduction
 
-Although I spend most of my time pursuing my interests in data scince, al also have a guilty pleasure: studying history. In particular, I love the Viking era of Scandinavia. So, I decided to combine my two loves and scrape data about Viking artifacts from the Statens Historiska Museer, a Swedish museum group that has put their archive online for the public. 
+Although I spend most of my time pursuing my interests in data science, I also have a guilty pleasure: studying history. In particular, I love the Viking era of Scandinavia. So, I decided to combine my two loves and scrape data about Viking artifacts from the Statens Historiska Museer, a Swedish museum group that has put their archive online for the public. 
 
 My journey begins with the essentials: setting up the Python environment and installing the necessary packages. I'll then demonstrate how to use selenium for web scraping and pandas for data manipulation, enabling us to sift through and organize the database effectively. 
 
@@ -189,7 +189,7 @@ Finally, I saved the DataFrame as a CSV file for future use:
 cleaned_trade_artifacts.to_csv('trade_w_locations.csv', index=False)
 ```
 
-Please note that this dataset is in Swedish. To see my process of translating it, please see my Google Translation API post.
+Please note that this dataset is in Swedish. To see my process of translating it, please see my Google Translation API post [here](https://alpal923.github.io/2023/12/11/translating-viking-data.html).
 
 ## Conclusion
 

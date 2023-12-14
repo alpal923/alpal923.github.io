@@ -41,7 +41,7 @@ There was a spike in war artifacts and trade artifatcs found around 1880. I'd be
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/images/Viking_EDA/trade_years.png)
 
 ### 4. Comparative Analysis of Dig Sites
-Since I saw the spike around 1880, I looked back into my data to see if there were any fields that might indicate a single fortuitous dig. The best I could find was 'Fornlämning' which I believe indicated dig site. I decided to plot the dig site names to the number of objects found there and add color detail for the year found.
+Since I saw the spike around 1880, I looked back into my data to see if there were any fields that might indicate a single fortuitous dig. The best I could find was 'Fornlämning' which I believe indicated dig site. I decided to plot the dig site names (x-axis shows those names) to the number of objects found there and add color detail for the year found.
 
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/images/Viking_EDA/war_dig_sites.png)
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/images/Viking_EDA/trade_dig_sites.png)

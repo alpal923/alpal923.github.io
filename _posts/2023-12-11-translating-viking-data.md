@@ -8,14 +8,13 @@ image: "/assets/images/DALLE/translating_viking.png"
 
 ## Introduction
 
-If you've read my post about scraping data from a Swedish museum's database, you'll remember that I was left with two datasets in a langauge I can't read. This post will detail the process by which I transformed the data into something I could interpret better.
+If you've read my post about [scraping data from a Swedish museum's database](https://alpal923.github.io/2023/11/29/viking-data-scraping.html), you'll remember that I was left with two datasets in a language I can't read. This post will detail the process by which I transformed the data into something I could interpret better.
 
 ## Getting Started
 ### Setting the Stage with Essential Libraries
 The journey begins with importing necessary Python libraries. The code sets up the environment by importing modules like os, pandas, google.cloud.translate_v2 (Google's translation API), and urllib. These libraries lay the groundwork for interacting with Google's translation services and handling data.
 
-python
-Copy code
+```python
 import os
 import pandas as pd
 from google.cloud import translate_v2 as translate
@@ -23,6 +22,7 @@ from google.oauth2 import service_account
 import json
 from googleapiclient.discovery import build
 import urllib.parse
+```
 
 ### Configuring API Access
 The next step involves configuring access to Google's translation API. This is done by reading a configuration file containing the project ID and API key. This step is crucial as it authenticates our access to Google's cloud services, ensuring secure and authorized interactions.
@@ -155,7 +155,7 @@ df['year'] = df['date_column'].apply(convert_to_year)
 ```
 
 ## Conclusion
-This process allowed me to create a dataset more useful for the EDA and dashboard creation. While it wasn't perfect (some fields stayed Swedish) this is a much more usable set than before!
+This process allowed me to create a dataset more useful for the EDA and dashboard creation. While it wasn't perfect (some fields stayed Swedish) this is a much more usable set than before! To see what kind of analysis I did, visit my [EDA post](https://alpal923.github.io/2023/12/12/EDA-insights.html).
 
 ## Code Repo
 To see the full code for this process, visit this repo:
